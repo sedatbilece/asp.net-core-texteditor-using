@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<script src="~/ckeditor/styles.js"></script>
+<h1>form alanı</h1>
+
+
+<form action="/Home/Privacy" method="post">
+
+
+    <label>NAME</label>
+    <input type="Text" name="Name" class="form-control" />
+    <br />
+    <hr />
+    <label>Baslik</label>
+    <input type="Text" name="Baslik" class="form-control" />
+    <br />
+    <hr />
+    <label>Text</label>
+    <textarea class="form-control" name="Text" id="editorid"></textarea>
+
+
+    <input type="submit" name="gönder" value="gönder" />
+
+</form>
+
+
+@section Scripts{
+    <script src="~/ckeditor/ckeditor.js"></script>
+
+
+    <script >
+        CKEDITOR.replace("editorid");
+
+
+    </script>
+
+}
+
+
+
+
+
+

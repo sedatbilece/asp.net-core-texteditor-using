@@ -1,0 +1,21 @@
+﻿@model List<text_editor_kullanımı.Models.Makale>
+
+<link href="~/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" />
+<div>
+
+
+    @foreach (var x in Model)
+    {
+
+        @x.Name @x.Baslik @x.Tarih
+        <br />
+        @Html.Raw(x.Text);<!-- burası html eitketlerini ayıklayrak düzgün gösterim için-->
+
+        <br />
+        <hr />
+    }
+
+
+
+</div>
+
